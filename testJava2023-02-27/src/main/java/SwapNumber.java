@@ -23,12 +23,12 @@ public class SwapNumber {
          * swap numbers without third variable
          */
 
-//        first = first + second;
-//        second = first - second;
-//        first = first - second;
-        first = first ^ second;
-        second = first ^ second;
-        first = first ^ second;
+        first = first + second;
+        second = first - second;
+        first = first - second;
+//        first = first ^ second;
+//        second = first ^ second;
+//        first = first ^ second;
         System.out.println("First number = " + first);
         System.out.println("Second number = " + second);
     }

@@ -1,5 +1,6 @@
 package threads;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
 public class ThreadSum {
@@ -50,8 +51,14 @@ public class ThreadSum {
 //        thread2.start();
 
         try {
+            Thread.sleep(60000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        try {
             //Waits for this thread to die.( join() )
-            thread1.join();
+            // main thread is waiting until thread1 finish.
+            thread1.join(60000);
             thread2.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
